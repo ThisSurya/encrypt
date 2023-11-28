@@ -12,6 +12,7 @@ encrypt_bp = Blueprint(
 )
 
 @encrypt_bp.route('/index')
+@encrypt_bp.route('/')
 def index():
     letters = string.ascii_letters
     result_str = ''.join(random.choice(letters) for i in range(10))
